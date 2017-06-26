@@ -1,0 +1,39 @@
+{
+  "name": "smalltalk",
+  "version": "1.0.0",
+  "description": "My own simple blog framework powered by Node.js & vuejs.",
+  "main": "lib/smalltalk",
+  "bin": {
+    "smalltalk": "./bin/smalltalk"
+  },
+  "scripts": {
+    "prestart": "mkdir -p ./target && cp -rf ./public/* ./target/",
+    "start": "webpack && webpack-dev-server",
+    "eslint": "eslint .",
+    "jscs": "jscs .",
+    "test": "mocha test/index.js",
+    "test-cov": "istanbul cover --print both _mocha -- test/index.js"
+  },
+  "directories": {
+    "lib": "./lib",
+    "bin": "./bin"
+  },
+  "repository": "linwukang/smalltalk",
+  "homepage": "https://github.com/linwukang/smalltalk",
+  "keywords": [
+    "blog",
+    "framework",
+    "smalltalk"
+  ],
+  "author": "linwukang <vboylin1987@gmail.com> (http://www.vboylin.studio)",
+  "license": "Apache License V2",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^2.12.0",
+    "jscs": "^3.0.4",
+    "json-loader": "^0.5.4",
+    "mocha": "^2.5.3",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0"
+  }
+}
